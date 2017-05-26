@@ -1,6 +1,7 @@
 #include<stdio.h>
 int main(){
-    int n, bt[20], wt[20], tat[20], avgtat=0, avgwt=0, i, j;
+    int n, bt[20], wt[20], tat[20], i, j;
+    float  avgtat=0, avgwt=0;
 
     printf("Enter number of processes: ");
     scanf("%d", &n);
@@ -25,8 +26,8 @@ int main(){
 
     for(i=0;i<n;i++){
         tat[i] = bt[i] + wt[i];
-        avgtat += tat[i];
-        avgwt += wt[i];
+        avgtat+=tat[i];
+        avgwt+=wt[i];
         printf("\nP[%d]\t\t%d\t\t\t%d\t\t\t%d", i+1, bt[i], wt[i], tat[i]);
     }
 
